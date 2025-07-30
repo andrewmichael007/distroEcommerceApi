@@ -1,7 +1,6 @@
 
 //THIS IS THE CONTROLLING LOGIC FOR THE ORDER ROUTE
 
-//ROUTE FOR CREATING AND PLACING ORDERS
 
 //creating an array of empty orders
 let allOrders = [];
