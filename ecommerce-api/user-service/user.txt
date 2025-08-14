@@ -1,1 +1,1 @@
-
+this is the user service. handles registration, login, logout, JWT Authentication
