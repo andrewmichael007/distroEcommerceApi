@@ -1,1 +1,1 @@
-
+this handles the product service. this is basically crud operations performed on products
