@@ -1,1 +1,1 @@
-
+this handles the order service. tracks the ordering processes and commmunicates with the product  and user service
