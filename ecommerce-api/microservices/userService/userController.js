@@ -35,7 +35,7 @@ const register =  async ( req, res ) => {
 
     try {
         //checking if user already exists using the username or email
-        const existingUser = await User.findOne({ 
+        const existingUser = await User.findOne({
             $or:  [ { email } , { username } ]
         });
 
