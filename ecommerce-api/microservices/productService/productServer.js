@@ -17,11 +17,6 @@ const app = express();
 //understands json format of data
 app.use(express.json());
 
-//server mounting at "/" +  route path = final url "/bug"
-
-// create product server mount
-app.use( '/', productRoute);
-
 //mongodb connection
 mongoose.connect(process.env.PRODUCT_SERVICE_MONGO_URI, {
     // deprecated in mongoose 6.x
@@ -54,11 +49,16 @@ redisClient.on("connect", () =>
     console.log("Connected to Redis")
 );
 
-
+//attaching redis as middleware for route use
 app.use((req, res, next) => {
   req.redis = redisClient; // attach redis to req for route use
   next();
 });
+
+//server mounting at "/" +  route path = final url "/bug"
+
+// create product server mount
+app.use( '/', productRoute);
 
 //listening for incoming requests
 app.listen(port, () => {
