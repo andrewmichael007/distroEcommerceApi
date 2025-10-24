@@ -1,0 +1,19 @@
+{
+  "name": "productservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "productServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongos": "^0.0.0",
+    "redis": "^5.8.3"
+  }
+}
