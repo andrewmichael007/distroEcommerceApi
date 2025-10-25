@@ -3,7 +3,7 @@
 //require statements
 const express = require("express");
 const mongoose = require("mongoose");
-const userRoute = require( "./userRoute" );
+const userRoute = require( "./Routes/userRoute" );
 
 //loading the environment variables
 require("dotenv").config();
