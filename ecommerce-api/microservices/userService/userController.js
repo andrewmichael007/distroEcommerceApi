@@ -1,6 +1,6 @@
 
 //requiring the necessary modules
-const User = require("./userModel.js");
+const User = require("./Model/userModel.js");
 const bcrypt = require("bcrypt");
 const jwt  = require("jsonwebtoken");
 const { body, validationResult } = require("express-validator");
