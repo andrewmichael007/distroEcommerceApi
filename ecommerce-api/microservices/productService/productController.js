@@ -188,5 +188,7 @@ const getProduct = async ( req, res ) => {
     }
 };
 
+//updating products
+
 //export module
 module.exports  = { createProduct, bulkProducts, getProduct };
