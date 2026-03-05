@@ -1,15 +1,13 @@
-// import express from "express";
+//importing the product model from the product schema
 const Product = require("./Model/productModel.js");
 
 //requiring the unique identifier
 const { v4: uuidv4 } = require("uuid");
 
-//creating products
+//an async function for creating products
 const createProduct = async ( req, res ) => {
-
     //defining the request body
     const { name, description, price, inStock } = req.body;
-
     try {
         //creating new product
         const product = new Product ({
@@ -116,7 +114,7 @@ const bulkProducts = async ( req, res ) => {
     };
 };
 
-// retrieving  product
+// getting product
 const getProduct = async ( req, res ) => {
 
     //using the id to get request
@@ -171,7 +169,6 @@ const getProduct = async ( req, res ) => {
         //no, first cache and return product
         //cache for 30 seconds
         await req.redis.setEx(id, 30, JSON.stringify(dbproduct));
-
 
         return res.status(201).json({
             success : true,
